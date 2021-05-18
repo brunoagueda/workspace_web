@@ -1,0 +1,20 @@
+package br.com.isidrocorp.hello.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+/* As anotações são consideradas "comentários uteis", ou seja
+ * esta anotação será usada pelo Framework SpringBoot para indicar que
+ * a classe HelloController agora está apta a atender requisições via WEB
+ * 
+ */
+
+
+@RestController
+public class HelloController {
+	
+	@GetMapping
+	public String sayHello() {
+		return "Olha só... Meu primeiro programa em Spring Boot";
+	}
+
+}

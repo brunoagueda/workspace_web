@@ -1,0 +1,17 @@
+
+# Configurando a conexão com o banco
+
+# 1 - Usuário do banco
+spring.jpa.datasource.username = root
+
+# 2- Senha do banco
+spring.datasource.password = mysql
+
+# 3 - URL da base de dados
+spring.datasource.url = jdbc:mysql://localhost:3306/db_dashcard?useTimezone=true&serverTimezone=UTC
+
+# 4 - "Dialeto" que sera utilizado
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL8Dialect
+
+# 5 - (Opcional) Mostrar no console o SQL que é gerado
+spring.jpa.show_sql = true

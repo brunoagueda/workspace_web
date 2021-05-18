@@ -1,0 +1,13 @@
+
+# Configurando a conexão com o banco
+
+# 1 - Usuário do banco
+
+# 2- Senha do banco
+
+# 3 - URL da base de dados
+
+# 4 - "Dialeto" que sera utilizado
+
+# 5 - (Opcional) Mostrar no console o SQL que é gerado
+
