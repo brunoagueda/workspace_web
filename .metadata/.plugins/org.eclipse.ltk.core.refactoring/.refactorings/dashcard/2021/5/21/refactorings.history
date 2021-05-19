@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;br.com.turma18corp.dashcard.dao.agenteDAO&apos; to &apos;AgenteDAO&apos;&#x0D;&#x0A;- Original project: &apos;dashcard&apos;&#x0D;&#x0A;- Original element: &apos;br.com.turma18corp.dashcard.dao.agenteDAO&apos;&#x0D;&#x0A;- Renamed element: &apos;br.com.turma18corp.dashcard.dao.AgenteDAO&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;agenteDAO&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;br.com.turma18corp.dashcard.dao{agenteDAO.java[agenteDAO" matchStrategy="1" name="AgenteDAO" qualified="false" references="true" similarDeclarations="false" stamp="1621454599407" textual="false" version="1.0"/>
+</session>
