@@ -31,7 +31,59 @@ function verificaUsuario(){
 }
 
 function preencheTabela(lista){
-    console.log(lista);
+
+
+    var strSelect = `   <label for="agente">Selecione o Agente Financeiro</label>
+                        <select id="agente" name="agente" class="form-control mb-3 mt-3" onchange="usaAgente()">
+                            <option value="-1">**SELECIONE SEU AGENTE***</option>`;
+
+
+    var strTabela = `<table class ="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col"> Nome do Parceiro </th>
+                                <th scope="col"> Volume Transacional </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        
+                        `;
+    for (i=0; i<lista.length; i++){
+        var agente = lista[i];
+        strTabela = strTabela + `<tr>
+                                    <td> ${agente.nome} </td>
+                                    <td> ${agente.volume} </td>
+                                </tr>`;
+        strSelect = strSelect + `<option value="${agente.id}"> ${agente.nome} </option>`
+    
+    }
+
+    strTabela = strTabela +`</tbody>
+                            </table>`;
+    
+    strSelect = strSelect + `</select>`;
+
+
+    document.getElementById("tabelaAgentes").innerHTML = strTabela;   
+    document.getElementById("seletorAgentes").innerHTML = strSelect;
+    
 
                                                         
+}
+
+
+function usaAgente(){
+    
+    var idAgente = document.getElementById("agente").value;
+    
+    console.log("mudou para agente ="+idAgente);
+    
+    if(idAgente != -1){
+        window.location = "dashboard.html?id="+idAgente;
+    }
+}
+
+function logOut(){
+    localStorage.clear();
+    window.location.href = "../dashcard-front/index.html";
 }

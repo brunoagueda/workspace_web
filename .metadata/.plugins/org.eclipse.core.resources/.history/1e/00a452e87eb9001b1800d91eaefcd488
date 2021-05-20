@@ -1,0 +1,37 @@
+package br.com.turma18corp.dashcard.controller;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.turma18corp.dashcard.dao.TransacaoDAO;
+import br.com.turma18corp.dashcard.model.Agente;
+import br.com.turma18corp.dashcard.model.Transacao;
+
+@RestController
+@CrossOrigin("*")
+public class TransacaoController {
+	
+	@Autowired
+	private TransacaoDAO dao;
+	
+	@GetMapping("/transacoes")
+	public ArrayList<Transacao> recuperarTodas(){
+		ArrayList<Transacao> lista;
+		lista = (ArrayList<Transacao>) dao.findAll();
+		return lista;
+	}
+	
+	@GetMapping("/transacoes/{id}")
+	public ArrayList<Transacao> recuperarPeloIdAgente(@PathVariable int id){
+		Agente ag = new Agente();
+		ag.setId(id);
+		return dao.findAllByAgente(ag);
+	}
+	
+	
+}
