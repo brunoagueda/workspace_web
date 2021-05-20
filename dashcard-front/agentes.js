@@ -8,7 +8,7 @@ function verificaUsuario(){
     usuario = JSON.parse(usuario);
     console.log("usuario conectado = " +usuario.nome);
 
-    document.getElementById("fotoUsuario").innerHTML = `<img src="${usuario.linkFoto}" width="100%">`;
+    document.getElementById("fotoUsuario").innerHTML = `<img class="img-fluid" src="${usuario.linkFoto}" width="100%">`;
     document.getElementById("bioUsuario").innerHTML = `<h3>${usuario.nome}</h3>
                                                         <hr>
                                                         <strong>RACF</strong> ${usuario.racf} <br>
