@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script type="text/javascript" src="index.js"></script>
+
+    
+
     <title>.: Sistema Dashcard :.</title>
 </head>
 <body>
@@ -16,18 +19,29 @@
         </div>
 
     <!-- Formulario de login -->
-        
-            <div class="mb-3">
-            <label for="txtLogin" class="form-label">Digite sua identificação</label>
-            <input type="text" class="form-control" id="txtLogin" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">Preset atenção nas políticas de segurança da firma</div>
-            </div>
-            <div class="mb-3">
-            <label for="txtSenha" class="form-label">Digite a senha</label>
-            <input type="password" class="form-control" id="txtSenha">
-            </div>
-            
+            <form>
+                <div class="mb-3">
+                <label for="txtLogin" class="form-label">Digite sua identificação</label>
+                <input type="text" class="form-control" id="txtLogin" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Preset atenção nas políticas de segurança da firma</div>
+                </div>
+                <div class="mb-3">
+                <label for="txtSenha" class="form-label">Digite a senha</label>
+                <input type="password" class="form-control" id="txtSenha">
+                </div>
+            </form>
+
+            <script>
+                document.getElementById('txtSenha').addEventListener('keypress', function(event) {
+                    if (event.keyCode == 13) {
+                        enviarDados();
+                        event.preventDefault();
+                    }
+                });
+            </script>
+
             <button type="button" class="btn btn-primary" onclick="enviarDados()">Submit</button>
+            
         
         <!-- Fim do formulario -->
 

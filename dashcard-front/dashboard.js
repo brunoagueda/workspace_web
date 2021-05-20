@@ -29,5 +29,6 @@ function voltaPagina(){
 }
 
 function logOut(){
-    window.location.href = "../dashcard-front/agentes.html";
+    localStorage.clear();
+    window.location.href = "../dashcard-front/index.html";
 }

@@ -2,6 +2,8 @@ function enviarDados(){
     var txtLogin = document.getElementById("txtLogin").value;
     var txtSenha = document.getElementById("txtSenha").value;
 
+    
+
     // passo 1 - vou montar a msg de login
 
     var msgBody = {
@@ -48,3 +50,10 @@ function trataResultado(res){
     }
 
 }
+
+var pswd = document.getElementById("txtSenha");
+
+/* Call 'checkPswd' when the 'Enter' key is released. */
+pswd.onkeyup = function (e) {
+   if (e.which == 13) enviarDados();
+};
