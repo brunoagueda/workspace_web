@@ -50,10 +50,3 @@ function trataResultado(res){
     }
 
 }
-
-var pswd = document.getElementById("txtSenha");
-
-/* Call 'checkPswd' when the 'Enter' key is released. */
-pswd.onkeyup = function (e) {
-   if (e.which == 13) enviarDados();
-};
