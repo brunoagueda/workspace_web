@@ -51,8 +51,8 @@ function preencheTabela(lista){
     for (i=0; i<lista.length; i++){
         var agente = lista[i];
         strTabela = strTabela + `<tr>
-                                    <td> ${agente.nome} </td>
-                                    <td> ${agente.volume} </td>
+                                    <td><a href="dashboard.html?id=${agente.id}"> ${agente.nome}</a> </td>
+                                    <td><a href="dashboard.html?id=${agente.id}"> ${agente.volume}</a> </td>
                                 </tr>`;
         strSelect = strSelect + `<option value="${agente.id}"> ${agente.nome} </option>`
     
@@ -82,6 +82,9 @@ function usaAgente(){
         window.location = "dashboard.html?id="+idAgente;
     }
 }
+
+
+
 
 function logOut(){
     localStorage.clear();
