@@ -1,0 +1,84 @@
+body { 
+    background: url(../imagens/fundo.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: darkblue;
+    border-style: double;
+    background-color: rgb(198, 229, 240);
+  }
+
+  h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: darkblue;
+  }
+
+  h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: darkblue;
+    
+    background-color: rgb(198, 229, 240);
+  }
+
+  h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: darkblue;
+    
+  }
+
+  h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: darkblue;
+    
+    
+  }
+
+  h5{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: darkblue;
+    background-color: bisque;
+  }
+
+  .sucesso {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: darkblue;
+    border-style: groove;
+    background-color: rgba(40, 230, 40, 0.466);
+  }
+
+  .falha {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: darkblue;
+    border-style: groove;
+    background-color: rgba(219, 243, 7, 0.534);
+  }
+
+  .fraude {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: darkblue;
+    border-style: groove;
+    background-color:rgba(255, 0, 0, 0.438);
+}

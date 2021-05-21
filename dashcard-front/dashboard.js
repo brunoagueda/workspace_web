@@ -17,11 +17,37 @@ function geraRelatorio(){
 }
 
 function montaDashboard(totais){
-    document.getElementById("nomeAgente").innerHTML = "<h4>"+totais.nomeAgente+"</h4>";
-    document.getElementById("volumeAgente").innerHTML = "<h4>"+totais.volume+"</h4>";
-    document.getElementById("sucesso").innerHTML = totais.totalSucesso;
-    document.getElementById("falha").innerHTML = totais.totalFalha;
-    document.getElementById("fraude").innerHTML = totais.totalFraude;
+    document.getElementById("nomeAgente").innerHTML = "<h4>Agente Financeiro: "+totais.nomeAgente+"</h4>";
+    document.getElementById("volumeAgente").innerHTML = "<h5>Volume de Transações: "+totais.volume+"</h5>";
+    document.getElementById("sucesso").innerHTML = "<div class='sucesso'>Operações com sucesso: "+totais.totalSucesso+"</sucesso>";
+    document.getElementById("falha").innerHTML = "<div class='falha'>Operações com falha: "+totais.totalFalha+"</falha>";
+    document.getElementById("fraude").innerHTML = "<div class='fraude'>Possíveis fraudes: "+totais.totalFraude+"</fraude>";
+
+    var ctx = document.getElementById('meuGrafico').getContext('2d');
+    var meuGrafico = new Chart(ctx, 
+    {
+        type : 'polarArea',
+        data : {
+            labels: ['Sucesso', 'Falha', 'Fraude'],
+            datasets : [{
+                label: '# de operaçoes',
+                data: [totais.totalSucesso, totais.totalFalha, totais.totalFraude],
+                backgroundColor : ['rgba(75, 192, 192, 0.2)','rgba(255, 206, 86, 0.2)','rgba(255, 99, 132, 0.2)']
+            }] 
+        },
+        options : {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true,
+                    }
+                }]
+            }
+        }
+    }
+    );
 }
 
 function voltaPagina(){

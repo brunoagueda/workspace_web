@@ -8,8 +8,8 @@ function verificaUsuario(){
     usuario = JSON.parse(usuario);
     console.log("usuario conectado = " +usuario.nome);
 
-    document.getElementById("fotoUsuario").innerHTML = `<img class="img-fluid" src="${usuario.linkFoto}" width="100%">`;
-    document.getElementById("bioUsuario").innerHTML = `<h3>${usuario.nome}</h3>
+    document.getElementById("fotoUsuario").innerHTML = `<img class="hidden-lg hidden-sm hidden-xs" src="${usuario.linkFoto}" width="200" height="200" >`;
+    document.getElementById("bioUsuario").innerHTML = `<h1>${usuario.nome}</h1>
                                                         <hr>
                                                         <strong>RACF</strong> ${usuario.racf} <br>
                                                         <strong>EMAIL</strong> ${usuario.email} <br>
@@ -33,8 +33,9 @@ function verificaUsuario(){
 function preencheTabela(lista){
 
 
-    var strSelect = `   <label for="agente">Selecione o Agente Financeiro</label>
-                        <select id="agente" name="agente" class="form-control mb-3 mt-3" onchange="usaAgente()">
+    var strSelect = `   <br>
+                        <label for="agente"></label>
+                        <select id="agente" name="agente" class="form-control mb-3 mt-1" onchange="usaAgente()">
                             <option value="-1">**SELECIONE SEU AGENTE***</option>`;
 
 
